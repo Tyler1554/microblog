@@ -16,17 +16,33 @@
   <body>
     <header>
       <nav>
-        <a href="login.css">Login</a>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
       </nav>
     </header>
 
     <main>
       <h1>Create a new account!</h1>
+      <form>
+        <label for="nameFeild">Name:</label>
+        <input type="text" id="nameFeild" />
+
+        <label for="userNameFeild">UserName:</label>
+        <input type="text" id="userNameFeild" />
+
+        <label for="passwordFeild">Password:</label>
+        <input type="text" id="passwordFeild" />
+
+        <label for="confirmPasswordFeild">Confirm Password:</label>
+        <input type="text" id="confirmPasswordFeild" />
+
+        <button type="button" id="inputFeildButton">Submit</button>
+      </form>
     </main>
 
     <footer></footer>
 
     <!-- Page-specific code -->
-    <script src="index.js"></script>
+    <script src="register.js"></script>
   </body>
 </html>

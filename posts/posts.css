@@ -1,50 +1,47 @@
-.post-card {
-  width: 60%;
-  position: relative;
+.user-post {
+  width: 50%;                
+  margin: 0 auto;            
   border: 1px solid #ccc;
-  padding: 15px;
   border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  display: flex;             
+  flex-direction: column;    
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.username {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.timestamp {
-  color: #777;
+.post-container {
+  flex: 1;                  
+  display: flex;             
+  justify-content: space-between; 
+  align-items: flex-start;  
+  margin-bottom: 10px;       
 }
 
 .post-content {
-  margin-bottom: 10px;
+  flex: 1;                 
 }
 
-.post-actions {
-  margin-top: auto;
-  display: flex;
-  justify-content: flex-end;
+.username {
+  margin: 0;
 }
-.post-actions button {
-  margin-left: 5px;
+
+.like-button {
+  align-self: flex-end;     
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }
-.center-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.comment-button {
+  align-self: flex-end;     
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }

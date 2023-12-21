@@ -13,10 +13,30 @@ function loadPosts() {
     .then((response) => response.json())
     .then((data) => {
       for (let post of data) {
+        let jsCard = document.createElement("div");
+        jsCard.className = "user-post";
+
         let userName = document.createElement("h3");
         userName.innerText = post.username;
-        postCard.appendChild(userName);
-        // postContent.innerText = post.text;
+        
+
+        let postContent = document.createElement("p");
+        postContent.innerText = post.text;
+        postContent.className = "post-content"
+
+        let likeButton = document.createElement("button");
+        likeButton.className= "like-button";
+        likeButton.innerText= "Like";
+
+        let commentButton = document.createElement("button");
+        commentButton.className= "comment-button";
+        commentButton.innerText= "Comment";
+
+        jsCard.appendChild(userName);
+        jsCard.appendChild(postContent);
+        jsCard.appendChild(likeButton);
+        jsCard.appendChild(commentButton);
+        postCard.appendChild(jsCard);
       }
     });
 }

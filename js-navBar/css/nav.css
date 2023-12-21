@@ -4,6 +4,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+ 
 }
 
 header {
@@ -13,4 +14,11 @@ header {
   position: fixed;
   top: 0%;
   left: 0%;
+  border-radius: 25px;
+}
+
+a{
+ display: flex;
+margin-top: 4rem;
+text-decoration: none;
 }

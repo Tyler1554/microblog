@@ -1,0 +1,35 @@
+#main_container {
+  background-color: grey;
+  border: solid;
+  height: 50rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+#background_container {
+  background-color: rgb(255, 0, 0);
+  border: solid;
+  height: 20rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+#profile_container {
+  background-color: rgb(42, 175, 228);
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+}
+#bio_container{
+    background-color: rgb(19, 207, 82);
+    border: solid;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-top: 4rem; 
+}
+#post_container{
+    background-color: rgb(238, 255, 2);
+    border: solid;
+    height: 16rem;
+    border-radius: 1rem;
+    margin-top: 2rem; 
+}

@@ -1,0 +1,19 @@
+input {
+  border-radius: 25px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 10rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem;
+  padding: 2rem;
+}
+
+button {
+  margin-right: 40rem;
+  border-radius: 25px;
+}

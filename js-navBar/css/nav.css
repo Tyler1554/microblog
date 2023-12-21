@@ -4,7 +4,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
- 
 }
 
 header {
@@ -17,8 +16,11 @@ header {
   border-radius: 25px;
 }
 
-a{
- display: flex;
-margin-top: 4rem;
-text-decoration: none;
+a {
+  display: flex;
+  margin-top: 4rem;
+  text-decoration: none;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 3rem;
 }

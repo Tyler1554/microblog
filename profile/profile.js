@@ -1,7 +1,8 @@
 "use strict";
+let users_list = document.querySelector("#users_list");
 
-async function get_profile() {
-  const response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users", {
+async function get_users() {
+  const response = await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/", {
     headers: {
       "content-Type": "application/json",
       Authorization:
@@ -9,6 +10,10 @@ async function get_profile() {
     },
   });
   const users = await response.json();
-  console.log(users);
+  for (const user of users) {
+    let option = document.createElement("option");
+    option.innerText = user.username;
+    users_list.appendChild(option);
+  }
 }
-get_profile();
+get_users();

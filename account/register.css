@@ -20,6 +20,7 @@ input,label {
   padding: 1.5rem;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 button{
@@ -43,6 +44,8 @@ h1{
     padding: 1.5rem;
     margin-right:65%;
     background-color: rgb(218, 218, 218);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
 }
 
 body{

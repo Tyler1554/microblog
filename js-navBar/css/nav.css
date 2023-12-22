@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+header {
+  width: 8rem;
+  height: 100%;
+  background-color:rgb(218, 218, 218);
+  position: fixed;
+  top: 0%;
+  left: .2%;
+  border-radius: 25px;
+  border: solid;
+}
+
+a {
+  display: flex;
+  margin-top: 4rem;
+  text-decoration: none;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 3rem;
+  color: black;
+}

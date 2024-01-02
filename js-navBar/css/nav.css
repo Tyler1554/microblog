@@ -1,11 +1,14 @@
 nav {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  margin-bottom: 3rem;
+  border:solid;
+  border-radius: 25px;
 }
 
+<<<<<<< HEAD
 header {
   width: 8rem;
   /* height: 100%; */
@@ -16,10 +19,11 @@ header {
   border-radius: 25px;
   border: solid;
 }
+=======
+
+>>>>>>> 6fdf843e272bfb9a18a28f215aa94af3cc3bb523
 
 a {
-  display: flex;
-  margin-top: 4rem;
   text-decoration: none;
   font-size: medium;
   font-family: Verdana, Geneva, Tahoma, sans-serif;

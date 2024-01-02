@@ -4,14 +4,15 @@ form {
   justify-content: center;
   border: solid;
   border-radius: 25px;
-  margin-top:5rem;
+  margin-top: 5rem;
   margin-left: 15rem;
-  margin-right:20rem;
+  margin-right: 20rem;
   background-color: rgb(218, 218, 218);
-margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
-input,label {
+input,
+label {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -20,39 +21,28 @@ input,label {
   padding: 1.5rem;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
-button{
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px;
-   margin-left: auto;
-   margin-right: auto;
-    padding: 1.5rem;
-    font-size: larger;
-    margin-top: 5rem;
-    background-color: rgb(181, 189, 223);
-    margin-bottom: 3rem;
-
+button {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  font-size: larger;
+  margin-top: 5rem;
+  background-color: rgb(181, 189, 223);
+  margin-bottom: 3rem;
 }
 
-h1{
+h1 {
   display: flex;
   justify-content: center;
-    
-    border:solid;
-    border-radius: 25px;
-    padding: 1.5rem;
-    margin-left: 15rem;
-    margin-right:20rem;
-    background-color: rgb(218, 218, 218);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
 }
 
-body{
-    background-color:rgb(181, 189, 223);
-
+body {
+  background-color: rgb(181, 189, 223);
 }

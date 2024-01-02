@@ -46,3 +46,13 @@ h1 {
 body {
   background-color: rgb(181, 189, 223);
 }
+
+#inputDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input{
+  margin: 2rem;
+}

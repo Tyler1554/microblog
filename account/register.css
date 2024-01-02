@@ -9,12 +9,18 @@ form {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-
-  transition: transform 0.2s ease-in-out;
-  position: relative;
+  justify-content: center;
+  border: solid;
+  border-radius: 25px;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  margin-right: 10rem;
+  background-color: rgb(218, 218, 218);
+  margin-bottom: 3rem;
+  padding: 10rem;
 }
 
-input{
+input {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -49,11 +55,10 @@ h1 {
 }
 
 body {
-
-  background-color: #94081d ;
+  background-color: #ffdde2;
 }
 
-#inputDiv{
+#inputDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;

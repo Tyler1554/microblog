@@ -78,3 +78,7 @@ function logout() {
       window.location.assign("/"); // redirect back to landing page
     });
 }
+
+let signOut = document.querySelector("#signOut");
+
+signOut.onclick = logout;

@@ -79,6 +79,3 @@ function logout() {
     });
 }
 
-let signOut = document.querySelector("#signOut");
-
-signOut.onclick = logout;

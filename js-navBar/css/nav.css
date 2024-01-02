@@ -3,11 +3,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  margin-bottom: 3rem;
-  border:solid;
-  border-radius: 25px;
+  margin-bottom: 1rem;
 }
-
 
 
 a {
@@ -15,5 +12,9 @@ a {
   font-size: medium;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 3rem;
-  color: black;
+  color: blue;
+  
+}
+a:hover {
+  text-decoration: underline;
 }

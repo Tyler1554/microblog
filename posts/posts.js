@@ -7,8 +7,6 @@ function timeAgo(timestamp) {
   const currentDate = new Date();
   const postDate = new Date(timestamp);
   const seconds = Math.floor((currentDate - postDate) / 1000);
-   //yes i really calculated the seconds
-   //help
   if (seconds < 60) {
      return `${seconds} seconds ago`;
   } else if (seconds < 3600) {

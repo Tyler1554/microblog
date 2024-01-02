@@ -8,22 +8,22 @@ function timeAgo(timestamp) {
   const postDate = new Date(timestamp);
   const seconds = Math.floor((currentDate - postDate) / 1000);
   if (seconds < 60) {
-     return `${seconds} seconds ago`;
+    return `${seconds} seconds ago`;
   } else if (seconds < 3600) {
-     const minutes = Math.floor(seconds / 60);
-     return `${minutes} ${minutes === 1 ? "minute" : "minutes"} ago`;
+    const minutes = Math.floor(seconds / 60);
+    return `${minutes} ${minutes === 1 ? "minute" : "minutes"} ago`;
   } else if (seconds < 86400) {
-     const hours = Math.floor(seconds / 3600);
-     return `${hours} ${hours === 1 ? "hour" : "hours"} ago`;
+    const hours = Math.floor(seconds / 3600);
+    return `${hours} ${hours === 1 ? "hour" : "hours"} ago`;
   } else if (seconds < 2592000) {
-     const days = Math.floor(seconds / 86400);
-     return `${days} ${days === 1 ? "day" : "days"} ago`;
+    const days = Math.floor(seconds / 86400);
+    return `${days} ${days === 1 ? "day" : "days"} ago`;
   } else if (seconds < 31536000) {
-     const months = Math.floor(seconds / 2592000);
-     return `${months} ${months === 1 ? "month" : "months"} ago`;
+    const months = Math.floor(seconds / 2592000);
+    return `${months} ${months === 1 ? "month" : "months"} ago`;
   } else {
-     const years = Math.floor(seconds / 31536000);
-     return `${years} ${years === 1 ? "year" : "years"} ago`;
+    const years = Math.floor(seconds / 31536000);
+    return `${years} ${years === 1 ? "year" : "years"} ago`;
   }
 }
 function loadPosts() {
@@ -80,4 +80,26 @@ function likePost() {
     .then((data) => alert("Message Liked"));
 }
 
+let logoutButton1 = document.querySelector("#logOut");
+
+function logout1() {
+  const loginData = getLoginData();
+
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${loginData.token}`,
+    },
+  };
+
+  fetch(apiBaseURL + "/auth/logout", options)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .finally(() => {
+      window.localStorage.removeItem("login-data");
+      window.location.assign("/");
+    });
+}
+
+logoutButton1.onclick = logout1;
 loadPosts();

@@ -1,8 +1,6 @@
-/* auth.js provides LOGIN-related functions */
-
 "use strict";
 
-const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
+let apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 // Backup server:   https://microbloglite.onrender.com
 
 // You can use this function to get the login data of the logged-in
@@ -51,6 +49,9 @@ function login(loginData) {
 // which you may include in various pages in your app. Again, READ this
 // function and you will probably want to re-use parts of it for other
 // `fetch()` requests you may need to write.
+
+let logoutButton = document.querySelector("#logOut");
+
 function logout() {
   const loginData = getLoginData();
 
@@ -79,3 +80,4 @@ function logout() {
     });
 }
 
+logoutButton.onclick = logout;

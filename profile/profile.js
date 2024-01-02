@@ -3,7 +3,34 @@ let users_list = document.querySelector("#users_list");
 let main_container = document.querySelector("#main_container");
 let background_container = document.querySelector("#background_container");
 let bio_container = document.querySelector("#bio_container");
+let post_containter = document.querySelector("#post_container")
 let log_in_data = getLoginData();
+
+function timeAgo(timestamp) {
+  const currentDate = new Date();
+  const postDate = new Date(timestamp);
+  const seconds = Math.floor((currentDate - postDate) / 1000);
+   //yes i really calculated the seconds
+   //help
+  if (seconds < 60) {
+     return `${seconds} seconds ago`;
+  } else if (seconds < 3600) {
+     const minutes = Math.floor(seconds / 60);
+     return `${minutes} ${minutes === 1 ? "minute" : "minutes"} ago`;
+  } else if (seconds < 86400) {
+     const hours = Math.floor(seconds / 3600);
+     return `${hours} ${hours === 1 ? "hour" : "hours"} ago`;
+  } else if (seconds < 2592000) {
+     const days = Math.floor(seconds / 86400);
+     return `${days} ${days === 1 ? "day" : "days"} ago`;
+  } else if (seconds < 31536000) {
+     const months = Math.floor(seconds / 2592000);
+     return `${months} ${months === 1 ? "month" : "months"} ago`;
+  } else {
+     const years = Math.floor(seconds / 31536000);
+     return `${years} ${years === 1 ? "year" : "years"} ago`;
+  }
+}
 
 async function get_user() {
   const response = await fetch(
@@ -45,13 +72,12 @@ async function get_post() {
     let time_stamp = document.createElement("p");
 
     post_text.textContent = post.text;
-    time_stamp.textContent = post.createdAt;
+    time_stamp.textContent = timeAgo(post.createdAt);
+    post_div.classList.add("post_box")
 
     post_div.appendChild(post_text);
     post_div.appendChild(time_stamp);
-    document.body.appendChild(post_div);
-
-    console.log(post);
+    post_containter.appendChild(post_div);
   }
 }
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Post</title>
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="../account/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) {
+        window.location.replace("../account/login.html");
+      }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="new-post.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container1">
+          <ul>
+            <li>
+              <a href="/posts/posts.html"><button>username</button></a>
+            </li>
+            <li>
+              <a href="/posts/posts.html"><button>username</button></a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <ul>
+            <li>
+              <a href="/posts/posts.html"><button>login</button></a>
+            </li>
+
+            <li>
+              <a href="/posts/posts.html"><button>logout</button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h2>Create New Post!</h2>
+      <textarea name="" id="postText" cols="30" rows="10" maxlength="300"></textarea>
+      <br />
+      <button type="button" id="postButton">Post</button>
+      <a href="/posts/posts.html"><button>cancel</button></a>
+    </main>
+    <footer></footer>
+    <script src="new-post.js"></script>
+  </body>
+</html>

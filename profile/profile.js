@@ -38,10 +38,6 @@ async function get_user() {
 
   bio.textContent = user.bio;
   profile_name.textContent = user.username;
-  profile_div.appendChild(profile_name);
-  profile_div.appendChild(bio);
-  document.body.appendChild(profile_div);
-
   console.log(user);
   get_post()
 }

@@ -3,7 +3,7 @@
 #main_container {
   background-color: #94081d;
   border: solid;
-  height: 50rem;
+  height: auto;
   border-radius: 1rem;
   margin-top: 1rem;
   border: none;
@@ -39,7 +39,7 @@
 #post_container {
   background-color: #edf2f4;
   border: solid;
-  height: 16rem;
+  height: auto;
   border-radius: 1rem;
   margin-top: 2rem;
   border: none;

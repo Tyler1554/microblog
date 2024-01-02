@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+body{
+  background-color: #ffdde2;
+}
 
 #main_container {
   background-color: #94081d;
@@ -32,7 +35,7 @@
   height: 4rem;
   border-radius: 1rem;
   margin-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -68,7 +71,7 @@
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #007BFF;
+  background-color: #db0021;
   color: white;
   font-size: 16px;
   cursor: pointer;

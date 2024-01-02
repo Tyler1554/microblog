@@ -1,35 +1,49 @@
 #main_container {
-  background-color: grey;
+  background-color: #204b57;
   border: solid;
   height: 50rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  border:none;
+  padding: 1rem;
 }
 #background_container {
-  background-color: rgb(255, 0, 0);
+  background-color: #b3001b;
   border: solid;
   height: 20rem;
   padding: 2rem;
   margin-top: 1rem;
   border-radius: 2rem;
+  border:none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #profile_container {
-  background-color: rgb(42, 175, 228);
+  background-color: #c2b8b2;
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
+  border:none
 }
-#bio_container{
-    background-color: rgb(19, 207, 82);
-    border: solid;
-    height: 4rem;
-    border-radius: 1rem;
-    margin-top: 4rem; 
+#bio_container {
+  background-color: #197bbd;
+  border: solid;
+  height: 4rem;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+  border:none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#post_container{
-    background-color: rgb(238, 255, 2);
-    border: solid;
-    height: 16rem;
-    border-radius: 1rem;
-    margin-top: 2rem; 
+#post_container {
+  background-color: #125e8a;
+  border: solid;
+  height: 16rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  border:none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
 }

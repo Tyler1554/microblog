@@ -5,6 +5,9 @@ let background_container = document.querySelector("#background_container");
 let bio_container = document.querySelector("#bio_container");
 let post_containter = document.querySelector("#post_container");
 let edit_button = document.querySelector("#edit_button");
+let bio_textbox = document.querySelector("#bio_textbox");
+let username_textbox = document.querySelector("#username_textbox");
+let password_textbox = document.querySelector("#password_textbox");
 let log_in_data = getLoginData();
 
 function timeAgo(timestamp) {
@@ -82,24 +85,23 @@ async function get_post() {
   }
 }
 async function edit_user() {
-  const response = await fetch(
-    `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${log_in_data.username}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${log_in_data.token}`,
-        body: JSON.stringify({
-          password: "string",
-          bio: "string",
-          fullName: "string",
-        }),
-      },
-    }
-  );
+  let response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${log_in_data.username}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${log_in_data.token}`,
+    },
+    body: JSON.stringify({
+      password: password_textbox.value,
+      bio: bio_textbox.value,
+      fullName: username_textbox.value,
+    }),
+  });
+
   const edit = await response.json();
   console.log(edit);
 }
+
 edit_button.onclick = edit_user;
 get_user();
 // window.onload = get_users;

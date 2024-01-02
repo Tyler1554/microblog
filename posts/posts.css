@@ -4,6 +4,10 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #ffdde2;
+}
+nav a{
+  color:#db0021;
 }
 
 .user-post {
@@ -41,7 +45,7 @@ html {
 
 .like-button,
 .comment-button {
-  background-color: #007bff;
+  background-color: #db0021;
   color: white;
   border: none;
   padding: 5px 12px;
@@ -58,7 +62,7 @@ html {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #007BFF;
+  background-color: #db0021;
   color: white;
   font-size: 16px;
   cursor: pointer;

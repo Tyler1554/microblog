@@ -5,14 +5,14 @@ form {
   border: solid;
   border-radius: 25px;
   margin-top: 10rem;
- margin-left: 5rem;
- margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 10rem;
   background-color: rgb(218, 218, 218);
   margin-bottom: 3rem;
   padding: 10rem;
 }
 
-input{
+input {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -43,10 +43,10 @@ h1 {
 }
 
 body {
-  background-color: rgb(181, 189, 223);
+  background-color: #ffdde2;
 }
 
-#inputDiv{
+#inputDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;

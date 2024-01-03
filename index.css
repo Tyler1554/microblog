@@ -2,3 +2,13 @@ body{
     background-color: #ffdde2;
   }
   
+    h1 {
+      display: flex;
+      justify-content: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  
+#imageDiv{
+  display: flex;
+  justify-content: center;
+}

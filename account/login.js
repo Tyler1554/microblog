@@ -4,6 +4,8 @@
 
 const loginForm = document.querySelector("#login");
 
+let createAccountButton = document.querySelector("#createAccountButton");
+
 loginForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
     // as it will do by default when the Submit event is triggered:
@@ -22,3 +24,4 @@ loginForm.onsubmit = function (event) {
     // Time to actually process the login using the function from auth.js!
     login(loginData);
 };
+

@@ -13,19 +13,19 @@
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #ffdde2;
   margin: 15% auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #text-area {
-  margin: 4%;
-  padding: 0;
-  height: 300px;
-  width: 800px;
+  margin: 8%;
+  padding: 10%;
+  height: 100%;
+  width: 85%;
   font-size: 20px;
 }
 #close {
@@ -55,7 +55,7 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   margin-top: 10px;
   margin-left: 56px;
 }
@@ -66,7 +66,7 @@
 
   padding-left: 245px;
 
-  background-color: #ffffff;
+  background-color: ffdde2;
   color: #db0021;
   font-size: large;
 }

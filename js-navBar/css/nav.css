@@ -6,15 +6,15 @@ nav {
   margin-bottom: 1rem;
 }
 
-
-a {
+a,
+#logOut {
   text-decoration: none;
   font-size: medium;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 3rem;
-  color:#db0021;
-  
+  color: #db0021;
 }
-a:hover {
+a:hover,
+#logOut:hover {
   text-decoration: underline;
 }

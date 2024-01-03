@@ -102,8 +102,6 @@ function likePost() {
     });
 }
 
-
-
 //log out function
 let logoutButton1 = document.querySelector("#logOut1");
 function logout1() {

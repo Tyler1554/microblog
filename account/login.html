@@ -25,29 +25,29 @@
     <header></header>
 
     <main>
-      <h1>Login</h1>
-      <form id="login">
-        <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" minlength="3" />
-        </div>
+      <div>
+        <h1>Login</h1>
+        <form id="login">
+          <div>
+            <input type="text" id="username" minlength="3" placeholder="Username" />
+          </div>
 
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" minlength="6" />
-        </div>
+          <div>
+            <input type="password" id="password" minlength="6" placeholder="Password" />
+          </div>
 
-        <button id="loginButton" type="submit">Login</button>
-      </form>
+          <button id="loginButton" type="submit">Login</button>
+          <h3>Not a member? Create an account</h3>
 
-      <h3>Not a member? create an account</h3>
-      <a href="../account/register.html"><button>Create Account</button></a>
+       <button id="createAccountButton" type="button">Create Account</button>
+        </form>
+      </div>
     </main>
 
     <footer></footer>
 
     <!-- Page-specific code -->
-  
+
     <script src="login.js"></script>
   </body>
 </html>

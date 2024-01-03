@@ -29,7 +29,7 @@
   font-size: 20px;
 }
 #close {
-  background-color: #007bff;
+  background-color: #db0021;
   color: white;
   float: right;
   font-size: 28px;
@@ -47,7 +47,7 @@
   background-color: #077d26;
 }
 #postButton {
-  background-color: #007bff;
+  background-color: #db0021;
   color: white;
   border: none;
   font-size: medium;
@@ -67,6 +67,6 @@
   padding-left: 245px;
 
   background-color: #ffffff;
-  color: #007bff;
+  color: #db0021;
   font-size: large;
 }

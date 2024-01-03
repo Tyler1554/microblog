@@ -2,6 +2,7 @@
 
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
+let isLiked = false;
 
 //time stamp
 function timeAgo(timestamp) {
@@ -83,16 +84,25 @@ function loadPosts() {
 
 //like post
 function likePost() {
-  fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
+  fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${loginData.token}`,
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ postId: "65943a025cbe66285d126e98" }),
+    body: JSON.stringify({ postId: "6595aa065cbe66285d145d32" }),
   })
     .then((response) => response.json())
-    .then((data) => alert("Message Liked"));
+    .then((data) => {
+      alert("Message Liked");
+    })
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error.message);
+      alert("Failed to like the message. Please try again.");
+    });
 }
+
+
 
 //log out function
 let logoutButton1 = document.querySelector("#logOut1");

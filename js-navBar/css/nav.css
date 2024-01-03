@@ -4,6 +4,7 @@ nav {
   align-items: center;
   text-decoration: none;
   margin-bottom: 1rem;
+  background-color: #fff0f2;
 }
 
 a,
@@ -20,3 +21,4 @@ a:hover,
 #logOut:hover {
   text-decoration: underline;
 }
+

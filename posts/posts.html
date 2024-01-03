@@ -11,9 +11,8 @@
 
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
-    <link rel="stylesheet" href="../js-navBar/css/nav.css">
-
-    
+    <link rel="stylesheet" href="../js-navBar/css/nav.css" />
+    <link rel="stylesheet" href="/new-post/new-post.css" />
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../account/auth.js"></script>
@@ -25,7 +24,6 @@
   </head>
   <body>
     <header>
-      
       <nav>
         <a href="../index.html">Home</a>
         <a href="../posts/posts.html">Posts</a>
@@ -37,16 +35,15 @@
 
     <main>
       <!-- <button id="logOut">LOGOUT</button> -->
-      
+
       <div class="post-card"></div>
 
-      <a href="../new-post/new-post.html"><button class="circle-button">New Post</button></a>
-
-        
+      <a  id="newPostButton"><button class="circle-button">New Post</button></a>
     </main>
     <footer></footer>
 
-  <script src="posts.js"></script>
- 
+    <!-- Page-specific code -->
+    <script src="posts.js"></script>
+    <script src="/new-post/new-post.js"></script>
   </body>
 </html>

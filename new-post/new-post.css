@@ -6,7 +6,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-   /* Enable scroll if needed */
+  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -44,27 +44,36 @@
   text-decoration: none;
   cursor: pointer;
 }
+#footerDiv {
+ display: flex;
+ flex-direction: column;
+
+}
 #postButton:hover {
-  background-color: #077d26;
+  
+  background-color: #f3baba;
 }
 #postButton {
-  background-color: #db0021;
-  color: white;
+  
+  background-color: #ffdde2;
+  color: #db0021;
   border: none;
   font-size: medium;
-  padding: 16px 20px;
+  padding: 2% 2%;
   cursor: pointer;
-  border-radius: 5px;
+  font-size: xx-large;
+  font-weight: bold;
+  /* border-radius: 5%; */
   transition: background-color 0.2s ease-in-out;
-   align-self: flex-start; 
-  margin-top: 10px;
-  margin-left: 94.3%;
+  
+  /* margin-top: 10%;
+  margin-left: 94.3%; */
 }
 
 #divheader {
   display: flex;
   align-items: center;
-  
+
   padding-left: 35%;
 
   background-color: #ffdde2;

@@ -2,7 +2,7 @@
 const newPostButton = document.querySelector("#newPostButton");
 // main div
 const div = document.createElement("div");
-div.classList.add("modal");
+div.classList.add("modal-js");
 
 //div header
 const divHeader = document.createElement("div");
@@ -10,7 +10,7 @@ divHeader.setAttribute("id", "divheader");
 
 // content div
 const divContent = document.createElement("div");
-divContent.classList.add("modal-content");
+divContent.classList.add("modal-content-area");
 
 //text box
 const texBox = document.createElement("textarea");

@@ -80,6 +80,10 @@ nav a{
 .circle-button:active {
   background-color: #900c20;
 }
+.post-image{
+ width: 50%;
+ height: 50%;
+}
 
 
 

@@ -14,6 +14,7 @@ a,
   font-weight:bold ;
   padding: 3rem;
   color: #db0021;
+  cursor: pointer;
 }
 a:hover,
 #logOut:hover {

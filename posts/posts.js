@@ -58,10 +58,6 @@ function loadPosts() {
         likeButton.innerText = "Like";
         likeButton.onclick = likePost;
 
-        let commentButton = document.createElement("button");
-        commentButton.className = "comment-button";
-        commentButton.innerText = "Comment";
-
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
 
@@ -78,10 +74,8 @@ function loadPosts() {
           postContent.innerText = post.text;
         }
 
-        
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
-        jsCard.appendChild(commentButton);
         postCard.appendChild(jsCard);
       }
     });

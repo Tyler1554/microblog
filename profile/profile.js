@@ -81,6 +81,19 @@ async function get_post() {
 
     post_div.appendChild(post_text);
     post_div.appendChild(time_stamp);
+
+    const imageUrlRegex = /:\s*(.+)/;
+    const match = post.text.match(imageUrlRegex);
+
+    if (match) {
+      const imageUrl = match[1];
+      const imgElement = document.createElement("img");
+      imgElement.className = "post-image";
+      imgElement.src = imageUrl;
+      post_div.appendChild(imgElement);
+    } else {
+      post_text.innerText = post.text;
+    }
     post_containter.appendChild(post_div);
   }
 }

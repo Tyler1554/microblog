@@ -1,5 +1,5 @@
 // html const creation
-
+const newPostButton = document.querySelector("#newPostButton");
 // main div
 const div = document.createElement("div");
 div.classList.add("modal");
@@ -86,3 +86,5 @@ function closeTheWindow() {
 closeButton.onclick = closeTheWindow;
 //allows the user to post there new post
 newButton.onclick = grabData;
+//allows the user to click button to create new post
+newPostButton.onclick = newPost;

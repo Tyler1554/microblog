@@ -89,3 +89,7 @@ body{
 .circle-button:active {
   background-color: #900c20;
 }
+.post-image{
+  width: 25%;
+  height: 25%;
+ }

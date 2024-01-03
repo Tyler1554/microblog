@@ -1,5 +1,5 @@
 form {
-  background-color: #94081d;
+  background-color: #db0021;
   width: 75%;
   margin: 0 auto;
   border-radius: 12px;
@@ -39,9 +39,9 @@ button {
   padding: 1.5rem;
   font-size: larger;
   margin-top: 5rem;
-  background-color: #db0021;
+ background-color:#900c20 ;
   margin-bottom: 3rem;
-  color:#ffdde2;
+  color:white;
 }
 
 h1 {

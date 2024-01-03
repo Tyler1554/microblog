@@ -25,7 +25,3 @@ loginForm.onsubmit = function (event) {
     login(loginData);
 };
 
-function goToCreateAccount(){
-    window.location.href = "register.html"
-}
-createAccountButton.onclick = goToCreateAccount;

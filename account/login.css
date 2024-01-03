@@ -61,14 +61,31 @@
     margin-left: 5rem;
   }
   
-  h2,h3 {
+  h2 {
     display: flex;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
     color:#db0021
   }
-  
+  h3{
+    display: flex;
+    justify-content: center;
+  }
+
+  a,h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #db0021;
+  }
+
+  a:hover,
+  h3:hover{
+    text-decoration: underline;
+  }
+
+
+
   body {
     background-color: #ffdde2;
   }

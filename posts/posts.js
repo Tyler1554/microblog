@@ -80,7 +80,7 @@ function likePost() {
     .then((data) => alert("Message Liked"));
 }
 
-let logoutButton1 = document.querySelector("#logOut");
+let logoutButton1 = document.querySelector("#logOut1");
 
 function logout1() {
   const loginData = getLoginData();

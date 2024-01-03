@@ -4,10 +4,14 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #ffdde2;
+}
+nav a{
+  color:#db0021;
 }
 
 .user-post {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -30,6 +34,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 100%;
 }
 
 .username {
@@ -40,7 +45,7 @@ html {
 
 .like-button,
 .comment-button {
-  background-color: #007bff;
+  background-color: #db0021;
   color: white;
   border: none;
   padding: 5px 12px;
@@ -51,38 +56,30 @@ html {
   margin-top: 10px;
 }
 
-.ad-container {
-  position: fixed;
-  top: 5%;
-  right: 4%;
-  width: 20%;
-  height: 50%;
-  background-color: #f9f9f9;
-  border-left: 1px solid #ddd;
-}
-.message-container {
-  position: fixed;
-  top: 0%;
-  right: 1%;
-  width: 23%;
-  height: 30%;
-  background-color: #f9f9f9;
-  border-left: 1px solid #ddd;
+
+.circle-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #db0021;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  position: fixed;        
+  bottom: 20px;            
+  right: 20px;           
+  z-index: 1000;          
 }
 
-.ad-container + .message-container {
-  top: 60%;
+.circle-button:hover {
+  background-color: #0056b3;
 }
 
-.message {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.circle-button:active {
+  background-color: #004999;
 }
 
-.message:last-child {
-  border-bottom: none;
-}
-.mcdonalds-ad {
-  width: 120%;
-  height: 100%;
-}
+
+

@@ -11,11 +11,8 @@
 
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
-    <link rel="stylesheet" href="../js-navBar/css/nav.css">
-    <link rel="stylesheet" href="/new_post/new-post.css">
-    
-
-    <title>/POSTS</title>
+    <link rel="stylesheet" href="../js-navBar/css/nav.css" />
+    <link rel="stylesheet" href="/new-post/new-post.css" />
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../account/auth.js"></script>
@@ -27,66 +24,24 @@
   </head>
   <body>
     <header>
-      
       <nav>
         <a href="../index.html">Home</a>
-        <a href="../account/login.html">Login</a>
-        <a href="../account/register.html">Create Account</a>
         <a href="../posts/posts.html">Posts</a>
         <a href="../profile/profile.html">Profile</a>
-        <a href="/new_post/new-post.html">new post</a>
-
-        <button onclick="newPost()" role="button">Create New Post</button>
-    </nav>
-    
+        <a href="/new-post/new-post.html">new post</a>
+      </nav>
     </header>
 
     <main>
-      
-      <div class="center-content">
-        <div class="post-card"></div>
-      </div>
+      <!-- <button id="logOut">LOGOUT</button> -->
+
+      <div class="post-card"></div>
+
+      <a href="../new-post/new-post.html"><button class="circle-button">New Post</button></a>
     </main>
-
-    <div class="ad-container">
-      <img class="mcdonalds-ad" src="../images/M1-UPF010421-JUN.jpg" alt="McdonaldsAd" srcset="">
-    </div>
-
-    <div class="message-container">
-      <div class="container">
-        <div class="message">
-          <div class="user-avatar">👤</div>
-          <div class="message-content">
-            <strong>User A:</strong> Hi there! How are you doing?
-          </div>
-        </div>
-        
-        <div class="message">
-          <div class="user-avatar">👥</div>
-          <div class="message-content">
-            <strong>User B:</strong> I'm good, thanks! What about you?
-          </div>
-        </div>
-        
-        <div class="message">
-          <div class="user-avatar">👤</div>
-          <div class="message-content">
-            <strong>User A:</strong> I'm doing well too. Have you seen the latest updates?
-          </div>
-        </div>
-        
-        <div class="message">
-          <div class="user-avatar">👥</div>
-          <div class="message-content">
-            <strong>User B:</strong> Yes, they look great! Let's catch up soon.
-          </div>
-        </div>
-    </div>
-
     <footer></footer>
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
-    <script src="/new_post/new-post.js"></script>
   </body>
 </html>

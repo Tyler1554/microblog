@@ -1,4 +1,7 @@
 body{
     background-color: #ffdde2;
   }
-  
+#imageDiv{
+  display: flex;
+  justify-content: center;
+}

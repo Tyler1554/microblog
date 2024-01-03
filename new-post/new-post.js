@@ -12,6 +12,10 @@ divHeader.setAttribute("id", "divheader");
 const divContent = document.createElement("div");
 divContent.classList.add("modal-content-area");
 
+// foot div
+const footerDiv = document.createElement("div");
+footerDiv.setAttribute("id", "footerDiv");
+
 //text box
 const texBox = document.createElement("textarea");
 texBox.setAttribute("id", "text-area");
@@ -21,7 +25,7 @@ texBox.setAttribute("maxLength", "600");
 
 //post button
 const newButton = document.createElement("button");
-newButton.innerText = "post";
+newButton.innerText = "Post";
 newButton.setAttribute("id", "postButton");
 
 // close button
@@ -33,7 +37,7 @@ closeButton.innerHTML = "&times;";
 //text for post popup
 
 const popText = document.createElement("h1");
-popText.innerText = "whats on your mind?";
+popText.innerText = "Whats on your mind?";
 
 // function to grab the text box stuff
 
@@ -70,7 +74,9 @@ function newPost() {
   divContent.appendChild(closeButton);
   divContent.appendChild(divHeader);
   divContent.appendChild(texBox);
-  divContent.appendChild(newButton);
+  divContent.appendChild(footerDiv);
+  // footer for the button to post
+  footerDiv.appendChild(newButton);
   // all the divcontent appended to the div itself
   div.appendChild(divContent);
   // the div appended to the body of the page

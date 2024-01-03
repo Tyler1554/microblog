@@ -40,6 +40,7 @@ function loadPosts() {
 
         let userName = document.createElement("h3");
         userName.innerText = post.username;
+        userName.className = "username";
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;

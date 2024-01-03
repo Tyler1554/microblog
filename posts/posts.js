@@ -3,6 +3,7 @@
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
 
+//time stamp
 function timeAgo(timestamp) {
   const currentDate = new Date();
   const postDate = new Date(timestamp);
@@ -26,6 +27,8 @@ function timeAgo(timestamp) {
     return `${years} ${years === 1 ? "year" : "years"} ago`;
   }
 }
+
+//load posts
 function loadPosts() {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
     headers: {
@@ -61,6 +64,21 @@ function loadPosts() {
 
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
+
+        const imageUrlRegex = /:\s*(.+)/;
+        const match = post.text.match(imageUrlRegex);
+
+        if (match) {
+          const imageUrl = match[1];
+          const imgElement = document.createElement("img");
+          imgElement.className = "post-image";
+          imgElement.src = imageUrl;
+          jsCard.appendChild(imgElement);
+        } else {
+          postContent.innerText = post.text;
+        }
+
+        
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(commentButton);
@@ -69,6 +87,7 @@ function loadPosts() {
     });
 }
 
+//like post
 function likePost() {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
     method: "POST",
@@ -81,8 +100,8 @@ function likePost() {
     .then((data) => alert("Message Liked"));
 }
 
+//log out function
 let logoutButton1 = document.querySelector("#logOut1");
-
 function logout1() {
   const loginData = getLoginData();
 

@@ -2,7 +2,7 @@
 const newPostButton = document.querySelector("#newPostButton");
 // main div
 const div = document.createElement("div");
-div.classList.add("modal");
+div.classList.add("modal-js");
 
 //div header
 const divHeader = document.createElement("div");

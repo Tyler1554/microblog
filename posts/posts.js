@@ -2,6 +2,7 @@
 
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
+let isLiked = false;
 
 
 //time stamp
@@ -49,6 +50,7 @@ function loadPosts() {
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
+        postContent.value= post._id;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -57,6 +59,7 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
+        likeButton.onclick = function() { likePost(postContent); };
         likeButton.onclick = likePost;
 
         let commentButton = document.createElement("button");
@@ -82,11 +85,9 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-
-        jsCard.appendChild(goto_user_button);
+jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
-        jsCard.appendChild(commentButton);
         postCard.appendChild(jsCard);
 
        goto_user_button.onclick = function() { goto_user(userName); };
@@ -107,16 +108,23 @@ function loadPosts() {
 }
 
 //like post
-function likePost() {
-  fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
+function likePost(postContent) { 
+  fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
+    // mode: "no-cors",
     headers: {
       Authorization: `Bearer ${loginData.token}`,
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ postId: "65943a025cbe66285d126e98" }),
+    body: JSON.stringify({ postId: postContent.value }),
   })
     .then((response) => response.json())
-    .then((data) => alert("Message Liked"));
+    .then((data) => {
+      alert("Message Liked");
+    })
+    .catch((error) => {
+      alert("Failed to like the message. Please try again.");
+    });
 }
 
 //log out function

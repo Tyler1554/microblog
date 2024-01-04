@@ -4,6 +4,7 @@ nav {
   align-items: center;
   text-decoration: none;
   margin-bottom: 1rem;
+  background-color: #fff0f2;
 }
 
 a,
@@ -14,8 +15,10 @@ a,
   font-weight:bold ;
   padding: 3rem;
   color: #db0021;
+  cursor: pointer;
 }
 a:hover,
 #logOut:hover {
   text-decoration: underline;
 }
+

@@ -41,6 +41,7 @@ nav a{
   margin: 0;
   font-weight: 600;
   color: #db0021;
+  padding-left: 0;
 }
 
 .like-button,

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 body {
-  background-color: #faebd7;
+  /* background-color: #eeeeee; */
 }
 
 #main_container {
-  background-color: #94081d;
+  /* background-color: #94081d; */
   border: solid;
   height: auto;
   border-radius: 1rem;
@@ -13,7 +13,7 @@ body {
   padding: 1rem;
 }
 #background_container {
-  background-color: #db0021;
+  /* background-color: #db0021; */
   border: solid;
   height: 20rem;
   padding: 2rem;
@@ -30,39 +30,44 @@ body {
   border: none;
 }
 #bio_container {
-  background-color: #edf2f4;
-  border: solid;
-  height: 4rem;
-  border-radius: 1rem;
-  margin-top: 4rem;
-  padding-bottom: 6rem;
-  border: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#post_container {
-  background-color: #edf2f4;
+  /* background-color: #edf2f4; */
   border: solid;
   height: auto;
   border-radius: 1rem;
   margin-top: 2rem;
+  padding: 2rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#post_container {
+  /* background-color: #edf2f4; */
+  padding: 2rem;
+  border: solid;
+  height: auto;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #bio_container p {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 #background_container p {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 #post_title {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 .post_box {
   border-radius: 0.5rem;
-  background-color: #e0e1dd;
+  /* background-color: #e0e1dd; */
+  margin: 0.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -89,7 +94,7 @@ body {
 .circle-button:active {
   background-color: #900c20;
 }
-.post-image{
+.post-image {
   width: 25%;
   height: 25%;
- }
+}

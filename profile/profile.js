@@ -90,8 +90,10 @@ async function get_post() {
     let post_text = document.createElement("p");
     let time_stamp = document.createElement("p");
 
+    post_text.classList.add("container")
     post_text.textContent = post.text;
     time_stamp.textContent = timeAgo(post.createdAt);
+    
     post_div.classList.add("post_box");
 
     post_div.appendChild(post_text);

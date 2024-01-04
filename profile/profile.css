@@ -4,7 +4,7 @@ body {
 }
 
 #main_container {
-  background-color: #94081d;
+  /* background-color: #94081d; */
   border: solid;
   height: auto;
   border-radius: 1rem;
@@ -49,15 +49,15 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #bio_container p {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 #background_container p {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 #post_title {
-  font-family: "Russo One", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 .post_box {
@@ -65,7 +65,19 @@ body {
   background-color: #e0e1dd;
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  margin: 1rem;
 }
+
+p.container{
+  display: flex;
+ align-items: start;
+
+}
+
 .circle-button {
   width: 70px;
   height: 70px;
@@ -89,7 +101,8 @@ body {
 .circle-button:active {
   background-color: #900c20;
 }
-.post-image{
+.post-image {
   width: 25%;
   height: 25%;
- }
+}
+

@@ -4,7 +4,7 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #ffdde2;
+  background-color: #faebd7;
 }
 nav a{
   color:#db0021;
@@ -37,6 +37,7 @@ nav a{
 .username {
   font-weight: 600;
   color: #db0021;
+  padding-left: 0;
 }
 
 .like-button,

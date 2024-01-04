@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
 body {
   background-color: #ffdde2;
 }
@@ -49,22 +50,23 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #bio_container p {
-  font-family: "Russo One", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
 }
 #background_container p {
-  font-family: "Russo One", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
 }
 #post_title {
-  font-family: "Russo One", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
 }
 .post_box {
   border-radius: 0.5rem;
-  background-color: #e0e1dd;
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 3rem;
 }
 .circle-button {
   width: 70px;
@@ -89,7 +91,12 @@ body {
 .circle-button:active {
   background-color: #900c20;
 }
-.post-image{
+.post-image {
+  border-radius: 1.3rem;
   width: 25%;
   height: 25%;
- }
+  padding: 2rem;
+}
+.post_box p {
+  color:rgb(59, 59, 59);
+}

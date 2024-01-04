@@ -1,5 +1,5 @@
 form {
-  background-color: #ffffff;
+  background-color: #f0d0d4;
   width: 75%;
   margin: 0 auto;
   border-radius: 12px;
@@ -29,8 +29,8 @@ input {
   padding: 1.5rem;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffdde2;
@@ -45,9 +45,9 @@ button {
   margin-right: auto;
   padding: 1.5rem;
   font-size: larger;
-  margin-top: 5rem;
+  margin-top: 1rem;
  background-color:#db0021;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color:white;
 }
 
@@ -66,7 +66,7 @@ h2 {
 }
 
 body {
-  background-color: #ffdde2;
+  background-color: #faebd7;
 }
 
 #inputDiv {
@@ -75,3 +75,4 @@ body {
   justify-content: center;
   margin: auto;
 }
+

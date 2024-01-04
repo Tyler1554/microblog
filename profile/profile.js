@@ -37,8 +37,11 @@ function timeAgo(timestamp) {
 }
 
 async function get_user() {
+  //if theres a query perameter for user name use it 
+  //else use login data 
+  let user_name = get_username();
   const response = await fetch(
-    `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${log_in_data.username}`,
+    `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${user_name}`,
     {
       headers: {
         "content-Type": "application/json",
@@ -61,9 +64,21 @@ async function get_user() {
   get_post();
 }
 
+function get_username() {
+  let params = new URLSearchParams(window.location.search);
+
+
+  let user_name = log_in_data.username;
+  if (params.has("username")) {
+    user_name = params.get("username");
+  }
+  return user_name;
+}
+
 async function get_post() {
-  let user_post = log_in_data.username;
-  const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?username=${user_post}`, {
+  let user_name = get_username();
+  ;
+  const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?username=${user_name}`, {
     headers: {
       "content-Type": "application/json",
       Authorization: `Bearer ${log_in_data.token}`,

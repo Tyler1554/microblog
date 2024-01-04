@@ -2,7 +2,6 @@
 
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
-let isLiked = false;
 
 //time stamp
 function timeAgo(timestamp) {
@@ -49,7 +48,8 @@ function loadPosts() {
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value= post._id;
+        postContent.value = post._id;
+        let postLikeIds = post.likes;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -58,7 +58,16 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
-        likeButton.onclick = function() { likePost(postContent); };
+        likeButton.onclick = function () {
+          likePost(postContent);
+        };
+
+        let dislikeButton = document.createElement("button");
+        dislikeButton.className = "dislike-button";
+        dislikeButton.innerText = "Un-Like";
+        dislikeButton.onclick = function () {
+          unlikePost(postLikeIds);
+        };
 
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
@@ -78,13 +87,14 @@ function loadPosts() {
 
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
+        jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);
       }
     });
 }
 
 //like post
-function likePost(postContent) { 
+function likePost(postContent) {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
     // mode: "no-cors",
@@ -100,7 +110,28 @@ function likePost(postContent) {
     })
     .catch((error) => {
       alert("Failed to like the message. Please try again.");
+      
     });
+}
+
+//unlike post
+function unlikePost(postLikeIds) {
+  for (let id of postLikeIds){
+    let likeId = id._id;
+    fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes/${likeId}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${loginData.token}`,
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert("Message Un-Liked");
+      
+    });
+  }
+  
 }
 
 //log out function

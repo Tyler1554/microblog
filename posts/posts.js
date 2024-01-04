@@ -92,7 +92,7 @@ function loadPosts() {
 }
 
 //like post
-function likePost(postContent) {
+function likePost(postContent) {   
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
     // mode: "no-cors",

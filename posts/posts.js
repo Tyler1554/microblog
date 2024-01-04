@@ -49,6 +49,7 @@ function loadPosts() {
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
+        postContent.value= post._id;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -57,7 +58,7 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
-        likeButton.onclick = likePost;
+        likeButton.onclick = function() { likePost(postContent); };
 
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
@@ -83,26 +84,24 @@ function loadPosts() {
 }
 
 //like post
-function likePost() {
+function likePost(postContent) { 
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
+    // mode: "no-cors",
     headers: {
       Authorization: `Bearer ${loginData.token}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ postId: "6595aa065cbe66285d145d32" }),
+    body: JSON.stringify({ postId: postContent.value }),
   })
     .then((response) => response.json())
     .then((data) => {
       alert("Message Liked");
     })
     .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error.message);
       alert("Failed to like the message. Please try again.");
     });
 }
-
-
 
 //log out function
 let logoutButton1 = document.querySelector("#logOut1");

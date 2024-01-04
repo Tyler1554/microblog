@@ -4,14 +4,14 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #ffdde2;
+  background-color: #faebd7;
 }
 nav a{
   color:#db0021;
 }
 
 .user-post {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -34,17 +34,18 @@ nav a{
   display: flex;
   flex-direction: column;
   justify-content: space-between; */
-  max-width: auto;
+  max-width: 60%;
 }
 
 .username {
   margin: 0;
   font-weight: 600;
   color: #db0021;
+  padding-left: 0;
 }
 
 .like-button,
-.comment-button {
+.dislike-button {
   background-color: #db0021;
   color: white;
   border: none;

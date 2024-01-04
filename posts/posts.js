@@ -49,7 +49,8 @@ function loadPosts() {
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value= post._id;
+        postContent.value = post._id;
+        let postLikeIds = post.likes;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";

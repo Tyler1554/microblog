@@ -42,14 +42,15 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("h3");
+        let userName = document.createElement("a");
         userName.innerText = post.username;
         userName.className = "username";
+        userName.href = `../profile/profile.html?username=${post.username}`;
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value= post._id;
+        postContent.value = post._id;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -58,7 +59,14 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
-        likeButton.onclick = function() { likePost(postContent); };
+        likeButton.onclick = function () {
+          likePost(postContent);
+        };
+        likeButton.onclick = likePost;
+
+        let commentButton = document.createElement("button");
+        commentButton.className = "comment-button";
+        commentButton.innerText = "Comment";
 
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);

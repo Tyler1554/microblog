@@ -75,16 +75,29 @@ async function get_post() {
     let post_text = document.createElement("p");
     let time_stamp = document.createElement("p");
 
+    //ian adding so he can get the id
+    post_text.value = post._id;
+    let deletePostTextValue = post_text.value;
+
+    // ian added delete button here
+    const delete_button = document.createElement("button");
+    delete_button.innerText = "Delete";
+
     post_text.textContent = post.text;
     time_stamp.textContent = timeAgo(post.createdAt);
     post_div.classList.add("post_box");
 
     post_div.appendChild(post_text);
     post_div.appendChild(time_stamp);
-
+    post_div.appendChild(delete_button);
     const imageUrlRegex = /:\s*(.+)/;
     const match = post.text.match(imageUrlRegex);
+    //ian onclick event for delete post function that has params
 
+    yesButton.onclick = function () {
+      deletePost(deletePostTextValue);
+    };
+    delete_button.onclick = deletePostPopup;
     if (match) {
       const imageUrl = match[1];
       const imgElement = document.createElement("img");

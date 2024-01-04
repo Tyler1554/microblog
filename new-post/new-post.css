@@ -77,3 +77,30 @@
   color: #db0021;
   font-size: large;
 }
+
+.modal-content-delete {
+  position: relative;
+  background-color: #ffdde2;
+  margin: 15% auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 20%;
+  height: 9.7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#buttonYes:hover {
+  background-color: #f3baba;
+}
+#buttonYes {
+  background-color: #ffdde2;
+  color: #db0021;
+  border: none;
+  font-size: medium;
+  padding: 2% 2%;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: bold;
+
+  transition: background-color 0.2s ease-in-out;
+}

@@ -41,15 +41,15 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("h3");
+        let userName = document.createElement("a");
         userName.innerText = post.username;
         userName.className = "username";
+        userName.href = `../profile/profile.html?username=${post.username}`;
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value = post._id;
-        let postLikeIds = post.likes;
+        postContent.value= post._id;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";

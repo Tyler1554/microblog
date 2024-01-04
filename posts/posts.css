@@ -11,7 +11,7 @@ nav a{
 }
 
 .user-post {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -34,7 +34,7 @@ nav a{
   display: flex;
   flex-direction: column;
   justify-content: space-between; */
-  max-width: auto;
+  max-width: 60%;
 }
 
 .username {
@@ -44,7 +44,7 @@ nav a{
 }
 
 .like-button,
-.comment-button {
+.dislike-button {
   background-color: #db0021;
   color: white;
   border: none;

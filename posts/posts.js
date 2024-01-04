@@ -3,6 +3,7 @@
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
 
+
 //time stamp
 function timeAgo(timestamp) {
   const currentDate = new Date();
@@ -62,6 +63,10 @@ function loadPosts() {
         commentButton.className = "comment-button";
         commentButton.innerText = "Comment";
 
+        let goto_user_button = document.createElement("button");
+        goto_user_button.className = "goto_user_button";
+        goto_user_button.innerText = "Vist Profile";
+
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
 
@@ -78,13 +83,27 @@ function loadPosts() {
           postContent.innerText = post.text;
         }
 
-        
+        jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(commentButton);
         postCard.appendChild(jsCard);
+
+       goto_user_button.onclick = function() { goto_user(userName); };
+
       }
     });
+  async function goto_user(userName) {
+    const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`, {
+      headers: {
+        "content-Type": "application/json",
+        Authorization: `Bearer ${loginData.token}`,
+      },
+    });
+    const user = await response.json();
+    window.location.href = "../profile/profile.html"
+    console.log(user);
+  }
 }
 
 //like post

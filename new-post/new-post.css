@@ -45,13 +45,16 @@
   cursor: pointer;
 }
 #footerDiv {
-  display: flex;
-  flex-direction: column;
+ display: flex;
+ flex-direction: column;
+
 }
 #postButton:hover {
+  
   background-color: #f3baba;
 }
 #postButton {
+  
   background-color: #ffdde2;
   color: #db0021;
   border: none;
@@ -62,7 +65,7 @@
   font-weight: bold;
   /* border-radius: 5%; */
   transition: background-color 0.2s ease-in-out;
-
+  
   /* margin-top: 10%;
   margin-left: 94.3%; */
 }
@@ -77,4 +80,3 @@
   color: #db0021;
   font-size: large;
 }
-

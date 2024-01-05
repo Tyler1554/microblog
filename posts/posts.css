@@ -41,7 +41,8 @@ nav a {
 }
 
 .like-button,
-.dislike-button {
+.dislike-button, 
+.goto_user_button {
   background-color: #db0021;
   color: white;
   border: none;

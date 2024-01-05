@@ -24,22 +24,24 @@
 
     <main>
       <div id="main_container" class="container">
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Edit Profile
-        </button>
+        <div class="d-flex flex-end justify-content-end">
+          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Edit Profile
+          </button>
+        </div>
         <div id="background_container" class="container text-center">
           <div id="profile_container" class="container text-center my-2"></div>
         </div>
         <div id="bio_container" class="container">
-          <h3>Bio</h3>
+          <h3 class="mb-4">Bio</h3>
         </div>
         <div id="post_container">
-          <h3>Posts</h3>
+          <h3 class="mb-4">Posts</h3>
         </div>
       </div>
       <p id="username_display"></p>
       <p id="bio_display"></p>
-      <a id="newPostButton"><button class="circle-button">New Post</button></a>
+      <a id="newPostButton"><button class="circle-button">+</button></a>
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

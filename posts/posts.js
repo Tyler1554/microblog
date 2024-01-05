@@ -4,7 +4,6 @@ const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
 let isLiked = false;
 
-
 //time stamp
 function timeAgo(timestamp) {
   const currentDate = new Date();
@@ -50,7 +49,8 @@ function loadPosts() {
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value= post._id;
+        postContent.value = post._id;
+        let postLikeIds = post.likes;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -59,12 +59,16 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
-        likeButton.onclick = function() { likePost(postContent); };
-        likeButton.onclick = likePost;
+        likeButton.onclick = function () {
+          likePost(postContent);
+        };
 
-        let commentButton = document.createElement("button");
-        commentButton.className = "comment-button";
-        commentButton.innerText = "Comment";
+        let dislikeButton = document.createElement("button");
+        dislikeButton.className = "dislike-button";
+        dislikeButton.innerText = "Un-Like";
+        dislikeButton.onclick = function () {
+          unlikePost(postLikeIds);
+        };
 
         let goto_user_button = document.createElement("button");
         goto_user_button.className = "goto_user_button";
@@ -85,30 +89,35 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-jsCard.appendChild(goto_user_button);
+        jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
+        jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);
 
-       goto_user_button.onclick = function() { goto_user(userName); };
-
+        goto_user_button.onclick = function () {
+          goto_user(userName);
+        };
       }
     });
   async function goto_user(userName) {
-    const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`, {
-      headers: {
-        "content-Type": "application/json",
-        Authorization: `Bearer ${loginData.token}`,
-      },
-    });
+    const response = await fetch(
+      `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`,
+      {
+        headers: {
+          "content-Type": "application/json",
+          Authorization: `Bearer ${loginData.token}`,
+        },
+      }
+    );
     const user = await response.json();
-    window.location.href = "../profile/profile.html"
+    window.location.href = "../profile/profile.html";
     console.log(user);
   }
 }
 
 //like post
-function likePost(postContent) { 
+function likePost(postContent) {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
     // mode: "no-cors",
@@ -125,6 +134,23 @@ function likePost(postContent) {
     .catch((error) => {
       alert("Failed to like the message. Please try again.");
     });
+}
+
+function unlikePost(postLikeIds) {
+  for (let id of postLikeIds) {
+    let likeId = id._id;
+    fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes/${likeId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${loginData.token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("Message Un-Liked");
+      });
+  }
 }
 
 //log out function

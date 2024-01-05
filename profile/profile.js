@@ -37,18 +37,15 @@ function timeAgo(timestamp) {
 }
 
 async function get_user() {
-  //if theres a query perameter for user name use it 
-  //else use login data 
+  //if theres a query perameter for user name use it
+  //else use login data
   let user_name = get_username();
-  const response = await fetch(
-    `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${user_name}`,
-    {
-      headers: {
-        "content-Type": "application/json",
-        Authorization: `Bearer ${log_in_data.token}`,
-      },
-    }
-  );
+  const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${user_name}`, {
+    headers: {
+      "content-Type": "application/json",
+      Authorization: `Bearer ${log_in_data.token}`,
+    },
+  });
   const user = await response.json();
 
   let profile_div = document.createElement("div");
@@ -67,7 +64,6 @@ async function get_user() {
 function get_username() {
   let params = new URLSearchParams(window.location.search);
 
-
   let user_name = log_in_data.username;
   if (params.has("username")) {
     user_name = params.get("username");
@@ -77,7 +73,6 @@ function get_username() {
 
 async function get_post() {
   let user_name = get_username();
-  ;
   const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts?username=${user_name}`, {
     headers: {
       "content-Type": "application/json",
@@ -90,14 +85,14 @@ async function get_post() {
     let post_text = document.createElement("p");
     let time_stamp = document.createElement("p");
 
+    // ian added delete button here
+    let delete_button = document.createElement("button");
+    delete_button.innerText = "Delete";
+
     //ian adding so he can get the id
     post_text.value = post._id;
     let deletePostTextValue = post_text.value;
-
-    // ian added delete button here
-    const delete_button = document.createElement("button");
-    delete_button.innerText = "Delete";
-
+    delete_button.value = deletePostTextValue;
     post_text.textContent = post.text;
     time_stamp.textContent = timeAgo(post.createdAt);
     post_div.classList.add("post_box");
@@ -105,14 +100,16 @@ async function get_post() {
     post_div.appendChild(post_text);
     post_div.appendChild(time_stamp);
     post_div.appendChild(delete_button);
+
     const imageUrlRegex = /:\s*(.+)/;
     const match = post.text.match(imageUrlRegex);
-    //ian onclick event for delete post function that has params
 
-    yesButton.onclick = function () {
-      deletePost(deletePostTextValue);
+    //ian onclick event for delete post function that has params
+    delete_button.onclick = function () {
+      deletePostPopup(deletePostTextValue);
     };
-    delete_button.onclick = deletePostPopup;
+    yesButton.onclick = deletePost;
+
     if (match) {
       const imageUrl = match[1];
       const imgElement = document.createElement("img");

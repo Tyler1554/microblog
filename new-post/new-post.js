@@ -21,7 +21,7 @@ const texBox = document.createElement("textarea");
 texBox.setAttribute("id", "text-area");
 texBox.setAttribute("maxLength", "600");
 
-//text box span for character limit
+
 
 //post button
 const newButton = document.createElement("button");
@@ -78,9 +78,10 @@ function grabData() {
 }
 
 // function for Delete
-function deletePost(deletePostTextValue) {
+function deletePost() {
   const loginDataDelete = getLoginData();
-  fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/${deletePostTextValue}`, {
+  const postIdDelete = yesButton.value;
+  fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/${postIdDelete}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${loginDataDelete.token}`,
@@ -125,7 +126,8 @@ function newPost() {
 }
 
 //popup for delete post
-function deletePostPopup() {
+function deletePostPopup(deletePostTextValue) {
+  yesButton.value = deletePostTextValue;
   //deletePostPopup block
   yesButton.style.display = "block";
   popTextDelete.style.display = "block";
@@ -151,12 +153,7 @@ function deletePostPopup() {
   document.body.appendChild(deleteDiv);
 }
 
-// //clear div
-// function clearDiv() {
-//   while (div.firstChild) {
-//     div.removeChild(div.firstChild);
-//   }
-// }
+
 //closing the popup
 function closeTheWindow() {
   div.style.display = "none";
@@ -170,4 +167,4 @@ closeButton.onclick = closeTheWindow;
 newButton.onclick = grabData;
 //allows the user to click button to create new post
 newPostButton.onclick = newPost;
-// allows user to delete post
+

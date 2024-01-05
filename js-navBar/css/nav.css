@@ -1,11 +1,13 @@
 
 
 nav {
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-decoration: none;
   margin-bottom: 1rem;
+  border-bottom: 1px solid #db0021 ; 
   background-color: #f0d0d4;
   border-bottom: 1px solid #db0021 ; 
   padding-left: 3rem;
@@ -22,6 +24,8 @@ a,
   font-weight: 500;
   padding: 2rem;
   color: #db0021;
+  /* color: #f9f0f1; */
+  
   cursor: pointer;
 }
 a:hover,
@@ -30,7 +34,6 @@ a:hover,
 }
 
 nav a {
-  /* padding:2rem;  */
-  margin-block: 1rem;
-  margin-inline:.8rem;
+  margin-block: 2rem;
+  margin-inline: .8rem; 
 }

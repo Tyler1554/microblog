@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-
 body {
-  background-color: #ffdde2;
+  background-color: #faebd7;
 }
 
 #main_container {
@@ -28,8 +27,8 @@ body {
 }
 #profile_container {
   background-color: #edf2f4;
-  height: 15rem;
-  width: 15rem;
+  height: 13rem;
+  width: 13rem;
   border-radius: 50%;
   border: none;
 
@@ -45,6 +44,7 @@ body {
   margin-top: 2rem;
   padding: 2rem;
   border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #post_container {
   background-color: #edf2f4;
@@ -54,6 +54,7 @@ body {
   border-radius: 1rem;
   margin-top: 2rem;
   border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .post_box:hover{
   transform: translateY(-5px);
@@ -84,10 +85,6 @@ body {
   flex-direction: column;
   align-items:start;
   margin: 1rem;
-  background-color: #ffffff;
-  font-family: "Roboto", sans-serif;
-
-  margin-bottom: 3rem;
 }
 
 
@@ -115,8 +112,6 @@ body {
   background-color: #900c20;
 }
 .post-image {
-.post-image {
-  border-radius: 1.3rem;
   width: 25%;
 }
 

@@ -42,15 +42,19 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("h3");
+        let userName = document.createElement("a");
         userName.innerText = post.username;
         userName.className = "username";
+        userName.href = `../profile/profile.html?username=${post.username}`;
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
         postContent.value = post._id;
+
+
         let postLikeIds = post.likes;
+
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -62,6 +66,9 @@ function loadPosts() {
         likeButton.onclick = function () {
           likePost(postContent);
         };
+
+        likeButton.onclick = likePost;
+
 
         let dislikeButton = document.createElement("button");
         dislikeButton.className = "dislike-button";
@@ -89,11 +96,19 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
+
+
+
         jsCard.appendChild(goto_user_button);
+
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);
+
+      }
+    });
+
 
         goto_user_button.onclick = function () {
           goto_user(userName);
@@ -114,6 +129,7 @@ function loadPosts() {
     window.location.href = "../profile/profile.html";
     console.log(user);
   }
+
 }
 
 //like post

@@ -84,6 +84,7 @@ async function get_post() {
     let post_div = document.createElement("div");
     let post_text = document.createElement("p");
     let time_stamp = document.createElement("p");
+    time_stamp.className = "text-secondary"
 
     // ian added delete button here
     let delete_button = document.createElement("button");
@@ -137,7 +138,7 @@ async function edit_user() {
       fullName: username_textbox.value,
     }),
   });
-
+  window.location.href = "profile.html"
   const edit = await response.json();
   console.log(edit);
 }

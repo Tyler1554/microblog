@@ -6,8 +6,8 @@ html {
   font-family: Arial, sans-serif;
   background-color: #faebd7;
 }
-nav a{
-  color:#db0021;
+nav a {
+  color: #db0021;
 }
 
 .user-post {
@@ -54,7 +54,6 @@ nav a{
   margin-top: 10px;
 }
 
-
 .circle-button {
   width: 70px;
   height: 70px;
@@ -65,10 +64,10 @@ nav a{
   font-size: 16px;
   cursor: pointer;
   outline: none;
-  position: fixed;        
-  bottom: 20px;            
-  right: 20px;           
-  z-index: 1000;          
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .circle-button:hover {
@@ -78,10 +77,11 @@ nav a{
 .circle-button:active {
   background-color: #900c20;
 }
-.post-image{
- width: 25%;
- height: 25%;
+.post-image {
+  width: 25%;
+  height: 25%;
 }
+
 
 
 

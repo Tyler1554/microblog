@@ -87,6 +87,7 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
+
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         postCard.appendChild(jsCard);

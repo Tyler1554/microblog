@@ -21,19 +21,17 @@
 
     <main>
       <div id="main_container" class="container">
-        <div class="d-flex flex-end justify-content-end">
-          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Edit Profile
-          </button>
-        </div>
-        <div id="background_container" class="container text-center">
-          <div id="profile_container" class="container text-center my-2"></div>
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Edit Profile
+        </button>
+        <div id="background_container" class="container">
+          <div id="profile_container" class="container text-center"></div>
         </div>
         <div id="bio_container" class="container">
-          <h3 class="mb-4">Bio</h3>
+          <!-- <p>Bio</p> --><h3>Bio</h3>
         </div>
         <div id="post_container">
-          <h3 class="mb-4">Posts</h3>
+          <!-- <p id="post_title">Post</p> --> <h3>Post</h3>
         </div>
       </div>
       <p id="username_display"></p>
@@ -49,17 +47,17 @@
             </div>
             <div class="modal-body container">
               <div class="container">
-                <label for="bio">edit bio</label>
+                <label for="bio">Edit bio</label>
                 <input type="text" name="bio" id="bio_textbox" />
               </div>
               <br />
               <div class="containterd">
-                <label for="username">edit fullname</label>
+                <label for="username">Edit fullname</label>
                 <input type="text" name="username" id="username_textbox" />
               </div>
               <br />
               <div class="containter">
-                <label for="password">edit password</label>
+                <label for="password">Edit password</label>
                 <input type="text" name="password" id="password_textbox" />
               </div>
             </div>

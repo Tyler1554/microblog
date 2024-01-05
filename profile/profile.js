@@ -97,6 +97,7 @@ async function get_post() {
     delete_button.value = deletePostTextValue;
     post_text.textContent = post.text;
     time_stamp.textContent = timeAgo(post.createdAt);
+    
     post_div.classList.add("post_box");
 
     post_div.appendChild(post_text);

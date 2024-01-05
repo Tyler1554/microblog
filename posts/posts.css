@@ -30,15 +30,11 @@ nav a{
 }
 
 .post-content {
-  /* flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+  
   max-width: 60%;
 }
 
 .username {
-  margin: 0;
   font-weight: 600;
   color: #db0021;
   padding-left: 0;

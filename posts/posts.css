@@ -87,9 +87,5 @@ nav a{
 }
 
 
-/* craigs suggestion to contain post in container */
-.post p{
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 

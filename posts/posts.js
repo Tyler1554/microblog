@@ -43,7 +43,7 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("h3");
+        let userName = document.createElement("a");
         userName.innerText = post.username;
         userName.className = "username";
 
@@ -85,7 +85,7 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-jsCard.appendChild(goto_user_button);
+
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         postCard.appendChild(jsCard);

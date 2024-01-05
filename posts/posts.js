@@ -4,7 +4,6 @@ const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
 let isLiked = false;
 
-
 //time stamp
 function timeAgo(timestamp) {
   const currentDate = new Date();
@@ -43,14 +42,15 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("h3");
+        let userName = document.createElement("a");
         userName.innerText = post.username;
         userName.className = "username";
+        userName.href = `../profile/profile.html?username=${post.username}`;
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
         postContent.className = "post-content";
-        postContent.value= post._id;
+        postContent.value = post._id;
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -59,7 +59,9 @@ function loadPosts() {
         let likeButton = document.createElement("button");
         likeButton.className = "like-button";
         likeButton.innerText = "Like";
-        likeButton.onclick = function() { likePost(postContent); };
+        likeButton.onclick = function () {
+          likePost(postContent);
+        };
         likeButton.onclick = likePost;
 
         let commentButton = document.createElement("button");
@@ -85,30 +87,15 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         postCard.appendChild(jsCard);
-
-       goto_user_button.onclick = function() { goto_user(userName); };
-
       }
     });
-  async function goto_user(userName) {
-    const response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`, {
-      headers: {
-        "content-Type": "application/json",
-        Authorization: `Bearer ${loginData.token}`,
-      },
-    });
-    const user = await response.json();
-    window.location.href = "../profile/profile.html"
-    console.log(user);
-  }
 }
 
 //like post
-function likePost(postContent) { 
+function likePost(postContent) {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes", {
     method: "POST",
     // mode: "no-cors",

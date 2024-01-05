@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-
-body {
-  background-color: #ffdde2;
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"); */
+body, header, main {
+  padding: 0;
+  margin: 0;
 }
 
+
 #main_container {
-  background-color: #94081d;
+  /* background-color: #94081d; */
+
   border: solid;
   height: auto;
   border-radius: 1rem;
@@ -13,8 +15,14 @@ body {
   border: none;
   padding: 1rem;
 }
+
+main{
+  /* background-color: #fff0f2; */
+  /* background-color: #525252; */
+}
 #background_container {
-  background-color: #db0021;
+  /* background-color: #db0021; */
+  background-color: #f6f8fc;
   border: solid;
   height: 20rem;
   padding: 2rem;
@@ -25,43 +33,54 @@ body {
 }
 #profile_container {
   background-color: #edf2f4;
+  background-color: #f3dfe1;
+  background-color: #f1e6e7;
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
   border: none;
 }
 #bio_container {
-  background-color: #edf2f4;
-  border: solid;
-  height: 4rem;
-  border-radius: 1rem;
-  margin-top: 4rem;
-  padding-bottom: 6rem;
-  border: none;
-}
-#post_container {
-  background-color: #edf2f4;
+  /* background-color: #edf2f4; */
+  background-color: #f6f8fc;
   border: solid;
   height: auto;
   border-radius: 1rem;
   margin-top: 2rem;
+  padding: 2rem;
+  border: none;
+}
+#post_container {
+  /* background-color: #edf2f4; */
+  background-color: #f6f8fc;
+  padding: 2rem;
+  border: solid;
+  height: auto;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
   border: none;
 }
 #bio_container p {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
+
   font-size: 1.3rem;
 }
 #background_container p {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
+
   font-size: 1.3rem;
 }
 #post_title {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
 .post_box {
   border-radius: 0.5rem;
   background-color: #ffffff;
+  margin: 0.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
   font-family: "Roboto", sans-serif;
 
   margin-bottom: 3rem;
@@ -90,13 +109,5 @@ body {
   background-color: #900c20;
 }
 .post-image {
-  border-radius: 1.3rem;
   width: 25%;
-  height: 25%;
-  padding: 2rem;
-}
-.post_box p {
-  color: rgb(59, 59, 59);
-  display: flex;
-  flex-wrap: wrap;
 }

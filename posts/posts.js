@@ -52,9 +52,7 @@ function loadPosts() {
         postContent.className = "post-content";
         postContent.value = post._id;
 
-
         let postLikeIds = post.likes;
-
 
         let postTimestamp = document.createElement("span");
         postTimestamp.className = "post-timestamp";
@@ -68,7 +66,6 @@ function loadPosts() {
         };
 
         likeButton.onclick = likePost;
-
 
         let dislikeButton = document.createElement("button");
         dislikeButton.className = "dislike-button";
@@ -97,39 +94,12 @@ function loadPosts() {
           postContent.innerText = post.text;
         }
 
-
-
-        jsCard.appendChild(goto_user_button);
-
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);
-
       }
     });
-
-
-        goto_user_button.onclick = function () {
-          goto_user(userName);
-        };
-      }
-    });
-  async function goto_user(userName) {
-    const response = await fetch(
-      `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`,
-      {
-        headers: {
-          "content-Type": "application/json",
-          Authorization: `Bearer ${loginData.token}`,
-        },
-      }
-    );
-    const user = await response.json();
-    window.location.href = "../profile/profile.html";
-    console.log(user);
-  }
-
 }
 
 //like post

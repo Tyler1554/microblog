@@ -109,3 +109,14 @@ body {
   height: 25%;
 }
 
+.post_box button{
+  background-color: #db0021;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  align-self: flex-end;
+  margin-top: 10px;
+}

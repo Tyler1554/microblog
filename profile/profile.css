@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
 body {
-  background-color: #faebd7;
+  background-color: #ffdde2;
 }
 
 #main_container {
@@ -97,4 +97,6 @@ body {
 }
 .post_box p {
   color: rgb(59, 59, 59);
+  display: flex;
+  flex-wrap: wrap;
 }

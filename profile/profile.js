@@ -87,6 +87,7 @@ async function get_post() {
 
     // ian added delete button here
     let delete_button = document.createElement("button");
+    delete_button.setAttribute("id", "deletePostButton");
     delete_button.innerText = "Delete";
 
     //ian adding so he can get the id

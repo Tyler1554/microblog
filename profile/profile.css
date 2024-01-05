@@ -1,9 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"); */
-body, header, main {
-  padding: 0;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+body {
+  background-color: #faebd7;
 }
-
 
 #main_container {
   /* background-color: #94081d; */
@@ -19,14 +17,6 @@ body, header, main {
   flex-direction: column;
  align-items: center;
   background-color: #db0021;
-
-main{
-  /* background-color: #fff0f2; */
-  /* background-color: #525252; */
-}
-#background_container {
-  /* background-color: #db0021; */
-  background-color: #f6f8fc;
   border: solid;
   height: 20rem;
   padding: 2rem;
@@ -37,17 +27,14 @@ main{
 }
 #profile_container {
   background-color: #edf2f4;
-  background-color: #f3dfe1;
-  background-color: #f1e6e7;
-  height: 15rem;
-  width: 15rem;
+  height: 13rem;
+  width: 13rem;
   border-radius: 50%;
   border: none;
 
 }
 #bio_container {
-  /* background-color: #edf2f4; */
-  background-color: #f6f8fc;
+  background-color: #edf2f4;
   border: solid;
   /* height: 4rem; */
   height: auto;
@@ -57,40 +44,30 @@ main{
   margin-top: 2rem;
   padding: 2rem;
   border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #post_container {
   background-color: #edf2f4;
-  padding: 2rem;
-  /* background-color: #edf2f4; */
-  background-color: #f6f8fc;
   padding: 2rem;
   border: solid;
   height: auto;
   border-radius: 1rem;
   margin-top: 2rem;
-
   border: none;
-}
-.post_box:hover{
-  transform: translateY(-5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .post_box:hover{
   transform: translateY(-5px);
 }
 #bio_container p {
   /* font-family: "Russo One", sans-serif; */
-  /* font-family: "Russo One", sans-serif; */
-
   font-size: 1.3rem;
 }
 #background_container p {
   /* font-family: "Russo One", sans-serif; */
-  /* font-family: "Russo One", sans-serif; */
-
   font-size: 1.3rem;
 }
 #post_title {
-  /* font-family: "Russo One", sans-serif; */
   /* font-family: "Russo One", sans-serif; */
   font-size: 1.3rem;
 }
@@ -104,13 +81,6 @@ main{
   flex-direction: column;
   align-items:start;
   margin: 1rem;
-  background-color: #ffffff;
-  margin: 0.2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  font-family: "Roboto", sans-serif;
-
-  margin-bottom: 3rem;
 }
 
 
@@ -138,8 +108,8 @@ main{
   background-color: #900c20;
 }
 .post-image {
-.post-image {
   width: 25%;
+  height: 25%;
 }
 
 .post_box button{
@@ -161,4 +131,3 @@ main{
   overflow: hidden;
   text-overflow: ellipsis;
 } */
-}

@@ -138,7 +138,7 @@ async function edit_user() {
       fullName: username_textbox.value,
     }),
   });
-
+  window.location.href = "profile.html"
   const edit = await response.json();
   console.log(edit);
 }

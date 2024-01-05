@@ -89,8 +89,8 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-        jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
+        jsCard.appendChild(goto_user_button);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);

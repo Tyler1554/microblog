@@ -1,18 +1,17 @@
-body{
-    background-color: #faebd7;
-  }
-  
-    h1 {
-      display: flex;
-      justify-content: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-  
-#imageDiv{
+body {
+  background-color: #faebd7;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#imageDiv {
   display: flex;
   justify-content: center;
 }
-img{
+img {
   border-radius: 25px;
-  
 }

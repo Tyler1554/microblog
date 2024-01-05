@@ -2,6 +2,7 @@
 
 const postCard = document.querySelector(".post-card");
 const loginData = getLoginData();
+let isLiked = false;
 
 //time stamp
 function timeAgo(timestamp) {
@@ -41,10 +42,9 @@ function loadPosts() {
         let jsCard = document.createElement("div");
         jsCard.className = "user-post";
 
-        let userName = document.createElement("a");
+        let userName = document.createElement("h3");
         userName.innerText = post.username;
         userName.className = "username";
-        userName.href = `../profile/profile.html?username=${post.username}`;
 
         let postContent = document.createElement("p");
         postContent.innerText = post.text;
@@ -70,6 +70,10 @@ function loadPosts() {
           unlikePost(postLikeIds);
         };
 
+        let goto_user_button = document.createElement("button");
+        goto_user_button.className = "goto_user_button";
+        goto_user_button.innerText = "Vist Profile";
+
         jsCard.appendChild(userName);
         jsCard.appendChild(postTimestamp);
 
@@ -85,13 +89,31 @@ function loadPosts() {
         } else {
           postContent.innerText = post.text;
         }
-
+        jsCard.appendChild(goto_user_button);
         jsCard.appendChild(postContent);
         jsCard.appendChild(likeButton);
         jsCard.appendChild(dislikeButton);
         postCard.appendChild(jsCard);
+
+        goto_user_button.onclick = function () {
+          goto_user(userName);
+        };
       }
     });
+  async function goto_user(userName) {
+    const response = await fetch(
+      `http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/${userName.innerText}`,
+      {
+        headers: {
+          "content-Type": "application/json",
+          Authorization: `Bearer ${loginData.token}`,
+        },
+      }
+    );
+    const user = await response.json();
+    window.location.href = "../profile/profile.html";
+    console.log(user);
+  }
 }
 
 //like post
@@ -111,28 +133,24 @@ function likePost(postContent) {
     })
     .catch((error) => {
       alert("Failed to like the message. Please try again.");
-      
     });
 }
 
-//unlike post
 function unlikePost(postLikeIds) {
-  for (let id of postLikeIds){
+  for (let id of postLikeIds) {
     let likeId = id._id;
     fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes/${likeId}`, {
-    method: "DELETE",
-    headers: {
-      Authorization: `Bearer ${loginData.token}`,
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      alert("Message Un-Liked");
-      
-    });
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${loginData.token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("Message Un-Liked");
+      });
   }
-  
 }
 
 //log out function

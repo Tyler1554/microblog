@@ -120,3 +120,11 @@ body {
   align-self: flex-end;
   margin-top: 10px;
 }
+
+
+
+/* craigs suggestion to contain post in container */
+/* .post p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
